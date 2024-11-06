@@ -8,14 +8,7 @@ import '../../config.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Platform.isAndroid
-      ? await Firebase.initializeApp(
-          options: const FirebaseOptions(
-              apiKey: 'AIzaSyCMXZx4OFN_lw9xGfF-hPeYxPB_ri7dGs4',
-              appId: '1:353335023996:android:34c136d9ffdcae1c5b6cf9',
-              messagingSenderId: '353335023996',
-              projectId: 'royal-assessment'))
-      : await Firebase.initializeApp();
+ await Firebase.initializeApp();
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
